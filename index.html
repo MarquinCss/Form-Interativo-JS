@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  <title>JavaScript Treino</title>
+</head>
+<body>
+ 
+<div id="cor" class="all">
+
+<img id="logo" class="js" onclick="troca()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.pnG" alt="JS">
+
+  <button id="btn2" class="btn2" onclick="mudarCor()"> ★
+  </button>
+
+<input type="text" autocomplete="off" placeholder="Seu Nome" id="nome" type="text">
+
+<br>
+
+<input id="idade" placeholder="Sua Idade" autocomplete="off" type="number">
+
+<br>
+
+<button onclick="envia()" id="btn" class="btn">
+  Enviar
+</button>
+
+<p id="resultado"> </p>
+<br>
+<footer id="footer">
+Por Marco Marchi <br>
+<a href=""> <i class="fa fa-github" aria-hidden="true"></i> </a>
+<a href=""> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+</footer>
+
+<br><br>
+</div> 
+
+</body>
+<script>
+//inputs
+function envia() { //parseInt
+  var nome = document.getElementById("nome").value;
+  var idade = parseInt(document.getElementById("idade").value);
+  var resultado = document.getElementById("resultado");
+
+  if (idade >=100) {
+  resultado.innerHTML = nome + ' você é um Deus? Com seus ' + idade + ' Anos.'
+  }
+
+  //else if
+ else if (idade >= 40) { 
+
+    resultado.innerHTML = nome + ' você tem ' + idade + ' anos está velho!'; }
+
+ //else if 
+else if (idade >=25 ){
+  resultado.innerHTML = nome +' você está com a coluna boa? Cuida essa coluna com seus ' + idade + ' anos.'
+}
+
+//else if 
+    else if (idade >= 18) {
+  resultado.innerHTML = nome + ' você tem ' + idade + ' anos. já pode ser preso meu amigo.';
+ } 
+//else if
+   else if (idade >= 16) {
+  
+    resultado.innerHTML = nome + ' Você tem ' + idade + ' anos. Pode votar, mas não pode dirigir ein meu amigo.';
+  } 
+//else
+  else {
+     
+    resultado.innerHTML = nome + ' Você tem ' + idade + ' anos. Não pode votar e nem dirigir ein jovem.';
+  }
+}
+
+
+//botão de mudar cor
+
+function mudarCor(){
+document.getElementById("cor").style="background-color:#1C1C1C;"
+document.getElementById("btn").style="background-color:white"
+document.getElementById("btn2").innerHTML = "☆"
+document.getElementById("btn2").style="background-color:white;"
+document.getElementById("resultado").style="color:white"
+document.getElementById("footer").style="color:white;"
+}
+
+
+//mudar img
+
+function troca(){
+  document.getElementById("logo").src="https://cdn-icons-png.flaticon.com/512/1/1492.png"
+}
+</script>
+</html>
